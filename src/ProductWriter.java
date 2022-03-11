@@ -38,10 +38,12 @@ public class ProductWriter
             Description = SafeInput.getNonZeroLenString(inStream, "Enter Product Description");
             Cost = SafeInput.getDouble(inStream, "Enter Product's Cost");
 
+            //Product object created from input information
             Product ProductRecord = new Product(ID, Name, Description, Cost);
 
             System.out.println(ProductRecord.toCSVDataRecord());
 
+            //Product object added to Product Array
             ProductRecordArray.add(ProductRecord);
 
             if(!newProduct)
@@ -59,7 +61,7 @@ public class ProductWriter
         // (may need to adjust for other IDE)
         // Not sure if the toolkit is thread safe...
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath() + "\\src\\ProductTestData.txt");
+        Path file = Paths.get(workingDirectory.getPath() + "/src/ProductTestData.txt");
 
         System.out.println(file);
         try
@@ -73,6 +75,7 @@ public class ProductWriter
 
             // Finally can write the file LOL!
 
+            //Product Array traversed for writing CSV data of product to text file
             for(Product ProductRecord : ProductRecordArray)
             {
                 String CSVRecord = ProductRecord.toCSVDataRecord();

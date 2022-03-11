@@ -56,6 +56,7 @@ public class ProductReader
 
                     if(CSVArray.length == 4)
                     {
+                        //Product object created here for setting information read from CSV values of text files
                         Product ProductRecord = new Product();
 
                         ProductRecord.setM_sID(CSVArray[0]);
@@ -63,6 +64,7 @@ public class ProductReader
                         ProductRecord.setM_sDescription(CSVArray[2]);
                         ProductRecord.setM_fCost(Double.parseDouble(CSVArray[3].trim()));
 
+                        //Product object added to Product Array
                         ProductRecordArray.add(ProductRecord);
                         line++;
                         // echo to screen
@@ -97,6 +99,7 @@ public class ProductReader
         String strDisplayUnderLine = String.format("%101s", " ").replace(' ', '=');
         System.out.println(strDisplayUnderLine);
 
+        //Product Array traversed to display Product information on Screen
         for(Product ProductRecord : ProductRecordArray)
         {
             String strDisplayRec = "";
