@@ -13,29 +13,29 @@ class ProductTest {
     @org.junit.jupiter.api.Test
     void setM_sID() {
         p1.setM_sID("00000A");
-        assertEquals("00000A", p1.getM_sID());
+        assertEquals("00000B", p1.getM_sID());
     }
 
     @org.junit.jupiter.api.Test
     void setM_sName() {
         p1.setM_sName("Pipeweed");
-        assertEquals("Pipeweed", p1.getM_sName());
+        assertEquals("Mushrooms", p1.getM_sName());
     }
 
     @org.junit.jupiter.api.Test
     void setM_sDescription() {
         p1.setM_sDescription("Long Bottom Leaf");
-        assertEquals("Long Bottom Leaf", p1.getM_sDescription());
+        assertEquals("Farmer Took’s Finest", p1.getM_sDescription());
     }
 
     @org.junit.jupiter.api.Test
     void setM_fCost() {
         p1.setM_fCost(600.0f);
-        assertEquals(600.0f, p1.getM_fCost());
+        assertEquals(125.0f, p1.getM_fCost());
     }
 
     @org.junit.jupiter.api.Test
     void toCSVDataRecord() {
-        assertEquals("00000A, Pipeweed, Long Bottom Leaf, 600.0", p1.toCSVDataRecord());
+        assertEquals("00000B, Mushrooms, Farmer Took’s Finest, 125.0", p1.toCSVDataRecord());
     }
 }
