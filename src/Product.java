@@ -61,4 +61,10 @@ public class Product
 
         return CSVDataRecord;
     }
+
+    public String toString()
+    {
+        return "Product{ID=" + m_sID + " Name=" + m_sName +
+                " Description=" + m_sDescription + " Cost=" + m_fCost + "}";
+    }
 }
